@@ -41,6 +41,22 @@ app.get('/get_chain', function(req, res){
   });
 })
 
+//  Checking if blockchain is valid
+app.get('/is_valid', function(req, res){
+  
+  let is_valid = blockchain.is_chain_valid(blockchain.chain)
+  let message;
+  if(is_valid){
+    message = 'All good, The blockchain is valid.';
+  }else{
+    message = 'Houston, We have a problem. The blockchain is not valid.';
+  }
+
+  res.send({
+    message: message
+  });
+})
+
 //  Running the App
 const PORT = 5000;
 app.listen(PORT,

@@ -29,8 +29,7 @@ class Blockchain {
     let check_proof = false;
     let hash_operation;
     while (!check_proof) {
-      let v = (Math.pow(new_proof, 2) - Math.pow(previous_proof, 2)).toString()
-      hash_operation = sha256( v )
+      hash_operation = sha256( (Math.pow(new_proof, 2) - Math.pow(previous_proof, 2)).toString() )
       if (hash_operation.substr(0, 4) == '0000') {
         check_proof = true;
       } else {
@@ -49,18 +48,21 @@ class Blockchain {
     let previous_block = chain[0];
     let block_index = 1;
     let block, previous_proof, proof;
+    let hash_operation ;
     while (block_index < chain.length) {
       block = chain[block_index];
       if (block.previous_hash != this.hash(previous_block))
         return false
       previous_proof = previous_block.proof;
       proof = block.proof;
-      hash_operation = sha256( (Math.pow(proof, 2) - Math.pow(previous_proof, 2).toString()))
+      hash_operation = sha256( (Math.pow(proof, 2) - Math.pow(previous_proof, 2)).toString())
       if (hash_operation.substr(0, 4) != '0000') 
         return false
       previous_block = block
       block_index++;
     }
+
+    return true;
   }
 }
 
