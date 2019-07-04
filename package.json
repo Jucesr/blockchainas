@@ -1,0 +1,24 @@
+{
+  "name": "blockchainaz",
+  "version": "1.0.0",
+  "description": "A nodejs version of the code presented in the course https://www.udemy.com/build-your-blockchain-az/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "blockchain",
+    "nodejs",
+    "course",
+    "udemy",
+    "begginer"
+  ],
+  "author": "Julio Ojeda",
+  "license": "MIT",
+  "dependencies": {
+    "sha256": "^0.2.0",
+    "express": "^4.16.3",
+    "body-parser": "^1.18.3"
+  }
+}
