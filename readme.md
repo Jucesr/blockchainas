@@ -1,6 +1,6 @@
 # NodeJS Blockchain
 
-A very basic implementation of a blockchain using NodeJS. This code was translated from Python code. See [Acknowledgments](##Acknowledgments)
+A very basic implementation of a blockchain using NodeJS. This code was translated from Python code. See [Acknowledgments](#acknowledgments)
 
 ## Getting Started
 
